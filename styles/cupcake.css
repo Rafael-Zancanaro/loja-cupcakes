@@ -1,0 +1,15 @@
+.cupcakes_corpo{
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lista_cupcakes{
+}
+
+.item{
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+} 
