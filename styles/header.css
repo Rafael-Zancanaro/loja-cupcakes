@@ -1,12 +1,14 @@
 .cabecalho_container {
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0% 1% 0% 3%;
+    box-shadow: 1px 1px 4px #365f5f;
     background-color: #8aecec;
+    order: 0;
 }
 
 .cabecalho_apps {

@@ -1,8 +1,10 @@
-.div_cupcakes_principal{
+.cupcakes{
     display: flex;
+    flex-direction: row;
 }
 
 .lista_cupcakes{
+    margin: 50px 0px 0px 30px;
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
@@ -10,9 +12,22 @@
 }
 
 .item{
-    height: 100px;
-    width: 180px;
+    margin-bottom: 30px;
+    height: 280px;
+    width: 303px;
     flex-grow: 1;
 } 
 
-@meida(max-width)
+.footer_item{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width:760px) {
+    .item{
+        height: 150px;
+        width: 250px;
+    } 
+}

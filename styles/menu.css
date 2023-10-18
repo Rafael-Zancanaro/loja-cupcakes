@@ -1,11 +1,7 @@
 .menu_container{
-    margin-top: 50px;
-    position: relative;
-    display: flex;
-    align-items:flex-start;
     background-color: hsl(180, 62%, 77%);
     width: 120PX;
-    height: 100vmin;
+    height: 100vh;
 }
 
 .opcao_lista{
@@ -16,11 +12,17 @@
     background: linear-gradient(00deg, #62f7f7 0%, #a1e9e9 35%, #CCEBEB 100%);
     display: flex; 
     align-items: center;
-    justify-content: center;
     height: 30PX;
-    width: 120PX;
+}
+
+.opcao{
+    width: 120px;
+    text-align: center;
 }
 
 .opcao:hover{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    height: 35px;
+    transition: 0.4s;
+    box-shadow: 1px 1px 4px #365f5f;
 }
