@@ -6,11 +6,11 @@ export default async function AuthStatus() {
   return (
     session ?
       <div>
-        {session && (
+        {
           <p className="text-stone-900 text-sm">
             Logado como {session.user?.email}
           </p>
-        )}
+        }
       </div>
       :
       <div>

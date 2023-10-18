@@ -1,15 +1,18 @@
-.cupcakes_corpo{
-    position: relative;
-    display: grid;
+.div_cupcakes_principal{
+    display: flex;
+}
+
+.lista_cupcakes{
+    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.lista_cupcakes{
-}
-
 .item{
-    height: 303px;
-    width: 280px;
+    height: 100px;
+    width: 180px;
     flex-grow: 1;
 } 
+
+@meida(max-width)
