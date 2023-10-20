@@ -1,13 +1,12 @@
 "use client";
 import { signOut } from "next-auth/react";
 
-export default function SignOut() {
+export function ButtonSignOut({children}: {children?: string}) {
   return (
     <button
-      className="text-stone-900 hover:text-stone-500 transition-all"
+      className= {children}
       onClick={() => signOut()}
     >
-      Deslogar-se!
     </button>
   );
 }
