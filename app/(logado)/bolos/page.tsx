@@ -12,13 +12,14 @@ export default function Bolos() {
           {produtos
             .filter((product) => product.categoria === Categoria.Bolo)
             .map((item) => (
-              <Item
-                key={item.id}
-                id={item.id}
-                src={item.image}
-                nome={item.name}
-                preco={item.price}
-              />
+              <div key={item.id}>
+                <Item
+                  id={item.id}
+                  src={item.image}
+                  nome={item.name}
+                  preco={item.price}
+                />
+              </div>
             ))}
         </div>
       </div>

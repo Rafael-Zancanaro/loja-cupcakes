@@ -12,7 +12,6 @@ export default function Carrinho() {
   const { cart } = useCart();
   const checkoutItens = cart.map((cartItem) => {
     const produto = produtos.find((bolos) => bolos.id === cartItem.id)!;
-
     return {
       ...produto,
       amount: cartItem.amount,

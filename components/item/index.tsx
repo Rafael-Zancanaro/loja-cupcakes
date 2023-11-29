@@ -1,4 +1,5 @@
 import { Contador } from "../contador";
+import Image from "next/image";
 
 interface Props {
   id: number;
@@ -9,7 +10,9 @@ interface Props {
 export function Item({ id, src, nome, preco }: Props) {
   return (
     <div className="flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <img
+      <Image
+        height={200}
+        width={260}
         className="rounded-t-lg h-44 w-full object-cover"
         src={src}
         alt="Imagem"
