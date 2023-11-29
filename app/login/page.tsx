@@ -12,12 +12,12 @@ export default function Login() {
               src="/padaria-bolo.png"
               priority
               alt="Logo Cake Shop"
-              className="h-10 w-10 rounded-full"
+              className="h-20 w-20 rounded-full"
               width={20}
               height={20}
             />
           </Link>
-          <h3 className="text-xl font-semibold">Sign In</h3>
+          <h3 className="text-xl font-semibold">Entrar</h3>
           <p className="text-sm text-gray-500">
             Use seu email e senha para acessar sua conta
           </p>

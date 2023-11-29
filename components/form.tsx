@@ -44,10 +44,10 @@ export default function Form({ type }: { type: "login" | "register" }) {
           }).then(async (res) => {
             setLoading(false);
             if (res.status === 200) {
-              toast.success("Account created! Redirecting to login...");
+              toast.success("Conta criada! Redirecionando para login...");
               setTimeout(() => {
                 router.push("/login");
-              }, 2000);
+              }, 1000);
             } else {
               const { error } = await res.json();
               toast.error(error);
@@ -62,7 +62,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           htmlFor="email"
           className="block text-xs text-gray-600 uppercase"
         >
-          Email Address
+          Email
         </label>
         <input
           id="email"
@@ -79,7 +79,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           htmlFor="password"
           className="block text-xs text-gray-600 uppercase"
         >
-          Password
+          Senha
         </label>
         <input
           id="password"
@@ -100,24 +100,22 @@ export default function Form({ type }: { type: "login" | "register" }) {
         {loading ? (
           <LoadingDots color="#808080" />
         ) : (
-          <p>{type === "login" ? "Sign In" : "Sign Up"}</p>
+          <p>{type === "login" ? "Entrar" : "Cadastrar-se"}</p>
         )}
       </button>
       {type === "login" ? (
         <p className="text-center text-sm text-gray-600">
-          Don&apos;t have an account?{" "}
+          Não possui uma conta?{" "}
           <Link href="/register" className="font-semibold text-gray-800">
-            Sign up
+            Cadastrar-se
           </Link>{" "}
-          for free.
         </p>
       ) : (
         <p className="text-center text-sm text-gray-600">
-          Already have an account?{" "}
+          Já possui uma conta?{" "}
           <Link href="/login" className="font-semibold text-gray-800">
-            Sign in
+            Entrar
           </Link>{" "}
-          instead.
         </p>
       )}
     </form>

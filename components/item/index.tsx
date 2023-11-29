@@ -1,14 +1,12 @@
-import { BsCartPlus } from "react-icons/bs";
+import { Contador } from "../contador";
 
-export function Item({
-  src,
-  nome,
-  preco,
-}: {
+interface Props {
+  id: number;
   src: string;
   nome: string;
   preco: number;
-}) {
+}
+export function Item({ id, src, nome, preco }: Props) {
   return (
     <div className="flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <img
@@ -28,9 +26,7 @@ export function Item({
             currency: "BRL",
           }).format(preco)}
         </p>
-        <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg">
-          <BsCartPlus size={24} />
-        </button>
+        <Contador id={id} />
       </div>
     </div>
   );

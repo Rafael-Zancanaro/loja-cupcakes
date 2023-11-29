@@ -1,6 +1,4 @@
-import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
-import { CartProvider } from "hooks/useCart";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Suspense } from "react";
@@ -26,7 +24,7 @@ export const metadata: Metadata = {
   themeColor: "#FFF",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -36,10 +34,7 @@ export default async function RootLayout({
       <body className={inter.variable}>
         <Toaster />
         <Suspense fallback="Loading..."></Suspense>
-        <CartProvider>
-          <Navbar />
-          {children}
-        </CartProvider>
+        <div>{children}</div>
       </body>
     </html>
   );

@@ -1,48 +1,66 @@
+import Aside from "@/components/aside";
+import Image from "next/image";
+
 export default function Principal() {
   return (
-    <div className="grid gap-4 mt-16 p-5  max-w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <div className="flex justify-center">
-        <img
-          className="w-2/4 rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
-          alt="Imagem home"
-        />
-      </div>
-      <div className="grid grid-cols-5 gap-4">
-        <div>
-          <img
-            className="h-auto max-w- rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+    <div>
+      <Aside />
+      <div className="sm:ml-64 min-h-screen grid gap-3 mt-14 p-4 max-w-full bg-gray-300">
+        <div className="flex justify-center">
+          <Image
+            width={260}
+            height={200}
+            className="w-2/4 rounded-lg border-2 border-gray-800"
+            src="/cupcakes/trento.jpg"
             alt="Imagem home"
           />
         </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-            alt="Imagem home"
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-            alt="Imagem home"
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
-            alt="Imagem home"
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-            alt="Imagem home"
-          />
+        <div className="grid grid-cols-5 gap-4">
+          <div>
+            <Image
+              width={260}
+              height={200}
+              className="rounded-md h-full w-full object-cover border-2 border-gray-800"
+              src="/cupcakes/ganache.png"
+              alt="Imagem home"
+            />
+          </div>
+          <div>
+            <Image
+              width={260}
+              height={200}
+              className="rounded-md h-full w-full object-cover border-2 border-gray-800"
+              src="/tortas/torta-biz.jpg"
+              alt="Imagem home"
+            />
+          </div>
+          <div>
+            <Image
+              width={260}
+              height={200}
+              className="rounded-md h-full w-full object-cover border-2 border-gray-800"
+              src="/bolos/kitkat.jpg"
+              alt="Imagem home"
+            />
+          </div>
+          <div>
+            <Image
+              width={260}
+              height={200}
+              className="rounded-md h-full w-full object-cover border-2 border-gray-800"
+              src="/bolos/recheio-creme.jpg"
+              alt="Imagem home"
+            />
+          </div>
+          <div>
+            <Image
+              width={260}
+              height={200}
+              className="rounded-md h-full w-full object-cover border-2 border-gray-800"
+              src="/tortas/banoff.jpg"
+              alt="Imagem home"
+            />
+          </div>
         </div>
       </div>
     </div>
