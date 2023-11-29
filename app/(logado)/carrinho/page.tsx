@@ -196,6 +196,7 @@ export default function Carrinho() {
           <div className="produtos_selecionados flex bg-slate-100 p-5 rounded-md flex-col gap-5">
             {checkoutItens.map((produto) => (
               <ItemCarrinho
+                key={produto.id}
                 id={produto.id}
                 src={produto.image}
                 preco={produto.price}
